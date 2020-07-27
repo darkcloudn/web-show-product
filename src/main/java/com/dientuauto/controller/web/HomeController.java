@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dientuauto.model.UserModel;
+
 /**
  * Servlet implementation class HomeController
  */
@@ -22,6 +24,9 @@ public class HomeController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		UserModel userModel = new UserModel();
+		userModel.setFullName("Vincent Tong");
+		request.setAttribute("model",userModel);
 		RequestDispatcher rd = request.getRequestDispatcher("/views/web/Home.jsp"); 
 		rd.forward(request, response);
 	}

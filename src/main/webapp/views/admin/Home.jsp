@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/common/tablib.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,6 @@
 <title>Trang Chủ</title>
 </head>
 <body>
-<h1>Home View By Admin</h1>
+<h1>${model.fullName}</h1>
 </body>
 </html>
